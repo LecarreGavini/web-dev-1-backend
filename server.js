@@ -36,4 +36,23 @@ app.get('/department-public-work-highways', (request, response) => {
 	})
 })
 
+app.get('/tab', (request, response) => {
+	const tab = request.query.tab
+	const data = {
+		1: {
+			title: 'Dogs',
+			description: 'I have a dog rabba :)',
+		},
+		2: {
+			title: 'Cats',
+			description: 'Do you have a cat?',
+		},
+		3: {
+			title: 'Snails',
+			description: 'They are so slow tho...',
+		},
+	}
+	response.json(data[tab])
+})
+
 app.listen(port)
