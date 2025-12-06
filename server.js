@@ -48,12 +48,31 @@ app.get('/tabs', (req, res) => {
 app.get('/users', (req, res) => {
 	const from = +req.query.from
 	const size = +req.query.size
-	console.log(typeof from, typeof size)
 	const users = require('./json/users.json')
 	res.json({
 		users: users.slice(from, from + size),
 		count: users.length,
 	})
+})
+
+app.post('/search', (req, res) => {
+	const id = req.body.id
+	const usersSearch = require('./json/usersSearch.json')
+	const data = usersSearch[id]
+
+	if (data == undefined) {
+		res.json({
+			success: false,
+		})
+	} else {
+		res.json({
+			id: id,
+			first: data.first,
+			last: data.last,
+			age: data.age,
+			success: true,
+		})
+	}
 })
 
 app.listen(port)

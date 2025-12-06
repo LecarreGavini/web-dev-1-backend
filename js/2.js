@@ -73,3 +73,38 @@ document.getElementById('next').addEventListener('click', () => {
 })
 
 // TODO: forms
+document.getElementById('search-id').addEventListener('click', async () => {
+	const id = document.getElementById('id-number').value
+	const res = await fetch('http://localhost:3000/search', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			id: id,
+		}),
+	})
+	const data = await res.json()
+	if (data.success == true) {
+		document.getElementById('id').innerText = data.id
+		document.getElementById('first').innerText = data.first
+		document.getElementById('last').innerText = data.last
+		document.getElementById('age').innerText = data.age
+	} else {
+		document
+			.getElementById('id-number')
+			.classList.add('border-2', 'border-red-500')
+		document.getElementById('search-error').classList.remove('hidden')
+		document.getElementById('id').innerText = ''
+		document.getElementById('first').innerText = ''
+		document.getElementById('last').innerText = ''
+		document.getElementById('age').innerText = ''
+	}
+})
+
+document.getElementById('id-number').addEventListener('keydown', () => {
+	document
+		.getElementById('id-number')
+		.classList.remove('border-2', 'border-red-500')
+	document.getElementById('search-error').classList.add('hidden')
+})
