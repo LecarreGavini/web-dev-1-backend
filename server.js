@@ -45,4 +45,15 @@ app.get('/tabs', (req, res) => {
 	})
 })
 
+app.get('/users', (req, res) => {
+	const from = +req.query.from
+	const size = +req.query.size
+	console.log(typeof from, typeof size)
+	const users = require('./json/users.json')
+	res.json({
+		users: users.slice(from, from + size),
+		count: users.length,
+	})
+})
+
 app.listen(port)
