@@ -1,12 +1,12 @@
 // TODO: tabs
-// TODO: table
-// TODO: forms
-
-document.querySelectorAll('.tab').forEach((tab, i) => {
+document.querySelectorAll('.tab').forEach((tab, index) => {
 	tab.addEventListener('click', async () => {
-		const res = await fetch(`http://localhost:3000/tab?tab=${i + 1}`)
+		const res = await fetch(`http://localhost:3000/tabs?tab=${index}`)
 		const data = await res.json()
 		document.getElementById('title').innerText = data.title
 		document.getElementById('description').innerText = data.description
 	})
 })
+
+// TODO: table
+// TODO: forms

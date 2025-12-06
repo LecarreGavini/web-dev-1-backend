@@ -36,10 +36,13 @@ app.get('/department-public-work-highways', (request, response) => {
 	})
 })
 
-app.get('/tab', (request, response) => {
-	const tab = request.query.tab
+app.get('/tabs', (req, res) => {
+	const tab = req.query.tab
 	const data = require('./json/tabs.json')
-	response.json(data[tab])
+	res.json({
+		title: data[tab].title,
+		description: data[tab].description,
+	})
 })
 
 app.listen(port)

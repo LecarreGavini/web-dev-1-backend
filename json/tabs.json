@@ -1,14 +1,14 @@
 {
+	"0": {
+		"title": "Apple",
+		"description": "It is red"
+	},
 	"1": {
-		"title": "Dogs",
-		"description": "I have a dog rabba :)"
+		"title": "Orange",
+		"description": "It is orange"
 	},
 	"2": {
-		"title": "Cats",
-		"description": "Do you have a cat?"
-	},
-	"3": {
-		"title": "Snails",
-		"description": "They are so slow tho..."
+		"title": "Banana",
+		"description": "It is yellow"
 	}
 }

@@ -1,11 +1,11 @@
 document.getElementById('get').addEventListener('click', () => {
 	get()
-	// Old()
+	// getOld()
 })
 
 const get = async () => {
 	const response = await fetch('http://localhost:3000/')
-	const text = await response.text()
+	const text = await response.json()
 	console.log(text)
 }
 
