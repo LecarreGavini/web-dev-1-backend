@@ -75,4 +75,11 @@ app.post('/search', (req, res) => {
 	}
 })
 
+app.get('/topics', (req, res) => {
+	const tab = req.query.tab
+	const topics = require('./json/topics.json')
+	const topic = topics[tab]
+	res.json(topic)
+})
+
 app.listen(port)

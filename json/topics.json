@@ -1,0 +1,83 @@
+[
+	{
+		"label": "HTML",
+		"title": "HTML Topics",
+		"description": "HyperText Markup Language. Standard language used to create and design the structure of web pages on the internet. HTML uses a system of tags to define elements such as headings, paragraphs, links, images, and other content that browsers display.",
+		"topics": [
+			"html",
+			"head",
+			"title",
+			"body",
+			"div",
+			"span",
+			"a",
+			"img",
+			"ul",
+			"ol",
+			"li",
+			"table",
+			"tr",
+			"td",
+			"form",
+			"input",
+			"button"
+		]
+	},
+	{
+		"label": "CSS",
+		"title": "CSS Topics",
+		"description": "Cascading Style Sheets (CSS). A language used to describe how HTML elements should look on a web page. It controls the style of a website. Specificity in CSS determines which rule wins when multiple rules target the same element. Each type of selector has a point value.",
+		"topics": [
+			"color",
+			"display",
+			"position",
+			"margin",
+			"padding",
+			"border",
+			"font-size",
+			"font-family",
+			"background-color",
+			"width",
+			"height",
+			"flexbox",
+			"grid"
+		]
+	},
+	{
+		"label": "JavaScript",
+		"title": "JavaScript Topics",
+		"description": "JavaScript is a high-level scripting language that runs in web browsers to add interactivity, control multimedia, handle events, and update content without reloading the page.",
+		"topics": [
+			"DOM Manipulation",
+			"Events",
+			"Functions",
+			"Variables",
+			"Loops",
+			"Conditionals",
+			"Arrays",
+			"Objects",
+			"document.getElementById('id');",
+			"document.getElementByClass('class');",
+			"document.getElementsByTagName('p');",
+			"document.getElementsByClassName('class');",
+			"document.querySelectorAll('div');"
+		]
+	},
+	{
+		"label": "Backend",
+		"title": "Backend Topics",
+		"description": "The whole server application which handles everything behind the scenes of your website or web application.",
+		"topics": [
+			"Business Logic",
+			"Database",
+			"Authentication",
+			"API",
+			"GET",
+			"POST",
+			"NodeJS",
+			"ExpressJS",
+			"Fetch API",
+			"Promises"
+		]
+	}
+]
